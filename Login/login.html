@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bean Voyage</title>
+    
+  
+    <!-- Common Navbar CSS -->
+<link rel="stylesheet" href="../frontend/bean.css">
+<!-- Login Form CSS -->
+<link rel="stylesheet" href="login.css">
+
+    <!-- Font Hamburger Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    
+</head>
+<body>
+
+    
+    <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Bean Voyage Logo">
+      <span>Bean Voyage</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../frontend/index.html">Home</a></li>
+      <li><a href="../Abouts/about.html">About</a></li>
+      <li><a href="../Services/service.html">Services</a></li>
+      <li><a href="../Login/login.html" class="active">SignUp</a></li>
+      <li><a href="../Contacts/contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+
+    <!-- Login/Register container -->
+    <div class="container">
+        <div class="form-box login">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                   <input type="email" placeholder="Email" name="email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                   <i class="bx bxs-lock-alt"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>or login with social platform</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-google"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="username" required>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" name="email" required>
+                    <i class="bx bxs-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <p>or Register with social platform</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-google"></i></a>
+                    <a href="#"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="toogle-box">
+            <div class="toogle-panel toogle-left">
+                <h1>Hello Welcome</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">Register</button>
+            </div>
+            <div class="toogle-panel toogle-right">
+                <h1>Welcome Back</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+   <script src="../frontend/bean.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>
