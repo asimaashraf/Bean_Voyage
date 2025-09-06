@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Specialty Drinks – Bean Voyage</title>
+
+  <!-- Common Navbar CSS -->
+  <link rel="stylesheet" href="../frontend/bean.css">
+  <!-- Specialty Drinks CSS -->
+  <link rel="stylesheet" href="specialty-drinks.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ✅ Navbar (same as home page) -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../images/logo.png" alt="Bean Voyage Logo">
+      <span>Bean Voyage</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../frontend/index.html">Home</a></li>
+      <li><a href="../Abouts/about.html">About</a></li>
+      <li><a href="./service.html" class="active">Services</a></li>
+      <li><a href="../Login/login.html">SignUp</a></li>
+      <li><a href="../Contacts/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" id="openCart" aria-label="Open cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+     <button class="menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></button>
+   </div>
+  </nav>
+
+  <!-- ✅ Hero Section -->
+  <header class="page-hero">
+    <h1>Specialty Drinks</h1>
+    <p>Indulge in our handcrafted specialty beverages.</p>
+  </header>
+
+  <!-- ✅ Products -->
+  <main class="products container">
+
+    <!-- Card 1 -->
+    <div class="card" data-id="11" data-name="Caramel Macchiato" data-price="900">
+      <div class="card-img">
+        <img src="../images/caramel-macchiato.jpg" alt="Caramel Macchiato">
+      </div>
+      <div class="card-body">
+        <h3>Caramel Macchiato</h3>
+        <p class="desc">Rich espresso with vanilla syrup, milk & caramel drizzle.</p>
+        <div class="card-foot">
+          <span class="price">Rs 900</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" data-id="12" data-name="Vanilla Cold Brew" data-price="600">
+      <div class="card-img">
+        <img src="../images/vanilla-coldbrews.jpg" alt="Vanilla Cold Brew">
+      </div>
+      <div class="card-body">
+        <h3>Vanilla Cold Brew</h3>
+        <p class="desc">Cold brewed coffee with smooth vanilla cream.</p>
+        <div class="card-foot">
+          <span class="price">Rs 600</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" data-id="13" data-name="Pumpkin Spice Latte" data-price="800  ">
+      <div class="card-img">
+        <img src="../images/pumpkin-lattes.jpg" alt="Pumpkin Spice Latte">
+      </div>
+      <div class="card-body">
+        <h3>Pumpkin Spice Latte</h3>
+        <p class="desc">A seasonal favorite with pumpkin, cinnamon & nutmeg.</p>
+        <div class="card-foot">
+          <span class="price">Rs 800</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" data-id="14" data-name="Matcha Latte" data-price="600">
+      <div class="card-img">
+        <img src="../images/matcha-lattes.jpg" alt="Matcha Latte">
+      </div>
+      <div class="card-body">
+        <h3>Matcha Latte</h3>
+        <p class="desc">Japanese green tea matcha blended with steamed milk.</p>
+        <div class="card-foot">
+          <span class="price">Rs 600</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+        <!-- Card 5 -->
+    <div class="card" data-id="15" data-name="Mocha Frappuccino" data-price="900">
+      <div class="card-img">
+        <img src="../images/mocha-frappuccino.jpg" alt="Mocha Frappuccino">
+      </div>
+      <div class="card-body">Icy blend of coffee, chocolate, and whipped cream.
+        <h3>Mocha Frappuccino</h3>
+        <p class="desc"></p>
+        <div class="card-foot">
+          <span class="price">Rs 900</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card" data-id="16" data-name="Hazelnut Latte" data-price="600">
+      <div class="card-img">
+        <img src="../images/hazelnut-latte.jpg" alt="Hazelnut Latte">
+      </div>
+      <div class="card-body">
+        <h3>Hazelnut Latte</h3>
+        <p class="desc">Smooth espresso with steamed milk and hazelnut flavor.</p>
+        <div class="card-foot">
+          <span class="price">Rs 600</span>
+          <button class="add"><i class="fa fa-plus"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- ✅ Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your Cart</h2>
+      <button id="closeCart"><i class="fa fa-times"></i></button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="cart-summary">
+      <div class="row"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+      <button class="checkout" onclick="goToCheckout()">Checkout</button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay"></div>
+<footer>
+  <div class="footer-content">
+    <h3>Bean Voyage</h3>
+    <p>Your journey to the best coffee experience starts here. Explore our beans, merchandise, and more.</p>
+    
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="bottom">
+      &copy; 2025 Bean Voyage | All Rights Reserved
+    </div>
+  </div>
+</footer>
+  <!-- ✅ Scripts -->
+  <script src="../frontend/bean.js"></script>
+  <script src="specialty-drinks.js"></script>
+</body>
+</html>
