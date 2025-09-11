@@ -4,10 +4,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const bcrypt = require("bcrypt");
-const open = (...args) => import("open").then((m) => m.default(...args)); // Browser open karne ke liye
+//const open = (...args) => import("open").then((m) => m.default(...args)); 
+require("dotenv").config(); // Browser open karne ke liye
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+
 
 // ================== Middlewares ==================
 app.use(bodyParser.json());
@@ -23,7 +25,7 @@ app.use("/Login", express.static(path.join(__dirname, "../Login")));
 
 // ================== MongoDB Atlas Connection ==================
 mongoose
-  .connect("mongodb+srv://asimaashraf899:bean123@cluster0.zcgb1xc.mongodb.net/beanvoyage")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB Atlas Connected"))
   .catch((err) => console.error("❌ DB Error:", err));
 
@@ -187,5 +189,5 @@ app.get("/checkout", (req, res) => {
 // ================== Start Server ==================
 app.listen(PORT, () => {
   console.log(`🚀 Server running at: http://localhost:${PORT}/`);
-  open(`http://localhost:${PORT}/`); // ✅ Direct root se index.html open hoga
+//  open(`http://localhost:${PORT}/`); // ✅ Direct root se index.html open hoga
 });
