@@ -159,6 +159,9 @@ app.post("/checkout", async (req, res) => {
   }
 });
 
+app.get("/health", (req, res) => {
+  res.send("OK");
+});
 
 // ================== Routes for Pages ==================
 app.get("/", (req, res) => {
